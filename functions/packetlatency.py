@@ -39,6 +39,7 @@ blue = "\x1b[00;00;1;034m"
 blue_blink = "\x1b[00;00;5;034m"
 green = "\x1b[00;00;01;092m"
 green_blink = "\x1b[00;00;5;092m"
+green_2 = "\x1b[00;00;5;092m"
 
 
 def packetLatency(ip, data_info):
