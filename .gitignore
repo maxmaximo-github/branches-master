@@ -1,0 +1,3 @@
+/test*.py
+/functions/__pycache__/*
+/tmp/*

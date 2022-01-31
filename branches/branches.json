@@ -1,0 +1,75 @@
+{
+    "Branches": [
+        {
+            "Name": "Aguascalientes",
+            "Prefixs": {
+                "IPv4": "192.168.0.0",
+                "IPv4_len": "24",
+                "IPv6": "2001:db8:cafe:0::",
+                "IPv6_len": "64"
+            },
+            "Devices": [
+                {
+                    "Name": "R1",
+                    "IPv4": "",
+                    "IPv6": "2001:db8:cafe:0::1",
+                    "Type": "Router"
+                },
+                {
+                    "Name": "Fortinet",
+                    "IPv6": "2001:db8:cafe::2",
+                    "Type": "Firewall"
+                }
+            ],
+            "RebootPhonesLen": "1-50"
+        },
+        {
+            "Name": "Jalisco",
+            "Prefixs": {
+                "IPv4": "192.168.0.0",
+                "IPv4_len": "24",
+                "IPv6": "2001:db8:cafe:0::",
+                "IPv6_len": "64"
+            },
+            "Devices": [
+                {
+                    "Name": "R1",
+                    "IPv4": "192.168.0.1",
+                    "IPv6": "2001:db8:cafe::1",
+                    "Type": "Router"
+                },
+                {
+                    "Name": "Fortinet",
+                    "IPv4": "192.168.0.2",
+                    "IPv6": "2001:db8:cafe::2",
+                    "Type": "Firewall"
+                }
+            ],
+            "RebootPhonesLen": "10-50"
+        },
+        {
+            "Name": "Toluca",
+            "Prefixs": {
+                "IPv4": "192.168.0.0",
+                "IPv4_len": "24",
+                "IPv6": "2001:db8:cafe:0::",
+                "IPv6_len": "64"
+            },
+            "Devices": [
+                {
+                    "Name": "R1",
+                    "IPv4": "192.168.0.1",
+                    "IPv6": "2001:db8:cafe::1",
+                    "Type": "Router"
+                },
+                {
+                    "Name": "Fortinet",
+                    "IPv4": "192.168.0.2",
+                    "IPv6": "2001:db8:cafe::2",
+                    "Type": "Firewall"
+                }
+            ],
+            "RebootPhonesLen": "10-50"
+        }
+    ]
+}
