@@ -11,14 +11,22 @@
             "Devices": [
                 {
                     "Name": "R1",
-                    "IPv4": "",
+                    "IPv4": "192.168.100.1",
                     "IPv6": "2001:db8:cafe:0::1",
-                    "Type": "Router"
+                    "Type": "Router",
+                    "Brand": "Cisco"
+                },
+                {
+                    "Name": "SW1",
+                    "IPv4": "192.168.100.2",
+                    "Type": "Switch",
+                    "Brand": "Cisco"
                 },
                 {
                     "Name": "Fortinet",
                     "IPv6": "2001:db8:cafe::2",
-                    "Type": "Firewall"
+                    "Type": "Firewall",
+                    "Brand": "Fortinet"
                 }
             ],
             "RebootPhonesLen": "1-50"

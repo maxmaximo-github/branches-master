@@ -20,13 +20,14 @@ __status__ = "Development"
 # Import Own Functions
 from functions.clearscreen import ClearScreen
 from functions.createtmpfolder import CreateTMPFolder
+from functions.firewallwandiagnostic import FirewallWanDiagnostic
 from functions.jsonformat import JSONDataImport
 from functions.inputoption import InputOption
 from functions.menu import Menu
 from functions.pingbranches import PingBranches
 from functions.removefiles import RemoveFiles
 from functions.rebootbranchesphones import RebootBranchesPhones
-from functions.firewallwandiagnostic import FirewallWanDiagnostic
+from functions.RestartPasswords import RestartPasswords
 
 
 # Colores para impresion en pantalla.
@@ -100,6 +101,13 @@ def main():
                 else:
                     break
 
+            elif input_user == 4:
+                confirmation = RestartPasswords(branches)
+
+                if confirmation:
+                    continue
+                else:
+                    break
             else:
                 print("\n")
                 break
@@ -110,9 +118,6 @@ def main():
 
     except UnboundLocalError:
         print()
-
-    # except TypeError:
-    #     print("No selecionaste algun archivo.")
 
     finally:
         print(f"{green}{'Fin del programa':^60}{color_reset}\n")

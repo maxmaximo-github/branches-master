@@ -7,7 +7,7 @@ It seems that it has to have THIS docstring with a summary line, a blank line
 and sume more text like here. Wow.
 """
 __author__ = "Cesar Rodriguez"
-__copyright__ = "Copyright 2020"
+__copyright__ = "Copyright 2022"
 __credits__ = ["Cesar Rodriguez"]
 __license__ = "GPL"
 __version__ = "1.0.0"
@@ -41,7 +41,8 @@ def Menu():
         print(f"\t{red}2{green}) {red}Reboot Phones {green}Branches.")
         print(
             f"\t{red}3{green}) {red}Firewall Wan Diagnostics {green}Branches.")
-        print(f"\t{red}4{green}) {red}Exit")
+        print(f"\t{red}4{green}) {red}Restart Passwords {green}Branches.")
+        print(f"\t{red}5{green}) {red}Exit")
 
     except KeyboardInterrupt:
         print(

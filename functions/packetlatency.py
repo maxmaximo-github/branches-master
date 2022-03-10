@@ -70,18 +70,41 @@ def packetLatency(ip, data_info):
 
         links_up, links_down = [], []
         for line in lines:
-            if "state(alive)" in line:
+            if "Health" in line:
+                line = line.replace("(", " ").replace(")", " ").split(" ")[-3]
+                links_up.append(line)
+            
+            
+            elif "state(alive)" in line:
 
                 line = line.replace("(", " ").replace(")", " ").replace(
                     ":", "").replace("Seq", "").replace(",", "").replace(
                     "sla_map=0x1", "").replace("sla_map=0x0", "")
 
+                line = line.split()
+                line.pop(0)
+                alias = connection.send_command(
+                    f"show system interface {line[0]}").splitlines()
+                alias = alias[6].strip().split()[2]
+
+
+                line.insert(1, alias)
+                line = " ".join(line)
                 links_up.append(line)
+
 
             elif "state(dead)" in line:
                 line = line.replace("(", " ").replace(")", " ").replace(
                     ":", "").replace("Seq", "").replace(
                     ",", "").replace("sla_map=0x0", "")
+                
+                line = line.split()
+                line.pop(0)
+                alias = connection.send_command(
+                    f"show system interface {line[0]}").splitlines()
+                alias = alias[6].strip().split()[2]
+                line.insert(1, alias)
+                line = " ".join(line)
                 links_down.append(line)
 
             else:

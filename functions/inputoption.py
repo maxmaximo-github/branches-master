@@ -43,7 +43,7 @@ def InputOption():
             if input_user.isnumeric():
                 input_user = int(input_user)
 
-                if input_user in [1, 2, 3]:
+                if input_user in [1, 2, 3, 4, 5]:
                     break
 
                 else:
